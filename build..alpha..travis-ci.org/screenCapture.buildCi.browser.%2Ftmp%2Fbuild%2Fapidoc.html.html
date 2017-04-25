@@ -1,0 +1,4137 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://www.nodebb.org">nodebb (v1.4.0)</a>
+</h1>
+<h4>NodeBB Forum</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb">module nodebb</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.string">
+            function <span class="apidocSignatureSpan">nodebb.</span>string
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>appearance</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>cache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>database</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>emitter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>file</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>hotswap</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>install</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>logger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>mongo</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>navigation</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>pagination</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>password</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>ratelimit</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>redis</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>rewards</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>themes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>web</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.</span>widgets</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.appearance">module nodebb.appearance</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.appearance.get">
+            function <span class="apidocSignatureSpan">nodebb.appearance.</span>get
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.cache">module nodebb.cache</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.cache.get">
+            function <span class="apidocSignatureSpan">nodebb.cache.</span>get
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.database">module nodebb.database</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.database.get">
+            function <span class="apidocSignatureSpan">nodebb.database.</span>get
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.emitter">module nodebb.emitter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.emitter.all">
+            function <span class="apidocSignatureSpan">nodebb.emitter.</span>all
+            <span class="apidocSignatureSpan">(events, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.emitter.any">
+            function <span class="apidocSignatureSpan">nodebb.emitter.</span>any
+            <span class="apidocSignatureSpan">(events, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">nodebb.emitter.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.emitter.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.emitter.</span>domain</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.file">module nodebb.file</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.file.allowedExtensions">
+            function <span class="apidocSignatureSpan">nodebb.file.</span>allowedExtensions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.file.base64ToLocal">
+            function <span class="apidocSignatureSpan">nodebb.file.</span>base64ToLocal
+            <span class="apidocSignatureSpan">(imageData, uploadPath, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.file.exists">
+            function <span class="apidocSignatureSpan">nodebb.file.</span>exists
+            <span class="apidocSignatureSpan">(path, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.file.existsSync">
+            function <span class="apidocSignatureSpan">nodebb.file.</span>existsSync
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.file.isFileTypeAllowed">
+            function <span class="apidocSignatureSpan">nodebb.file.</span>isFileTypeAllowed
+            <span class="apidocSignatureSpan">(path, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.file.saveFileToLocal">
+            function <span class="apidocSignatureSpan">nodebb.file.</span>saveFileToLocal
+            <span class="apidocSignatureSpan">(filename, folder, tempPath, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.helpers">module nodebb.helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.helpers.setupPageRoute">
+            function <span class="apidocSignatureSpan">nodebb.helpers.</span>setupPageRoute
+            <span class="apidocSignatureSpan">(router, name, middleware, middlewares, controller)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.hotswap">module nodebb.hotswap</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.hotswap.find">
+            function <span class="apidocSignatureSpan">nodebb.hotswap.</span>find
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.hotswap.prepare">
+            function <span class="apidocSignatureSpan">nodebb.hotswap.</span>prepare
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.hotswap.replace">
+            function <span class="apidocSignatureSpan">nodebb.hotswap.</span>replace
+            <span class="apidocSignatureSpan">(id, router)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.install">module nodebb.install</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.install.save">
+            function <span class="apidocSignatureSpan">nodebb.install.</span>save
+            <span class="apidocSignatureSpan">(server_conf, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.install.setup">
+            function <span class="apidocSignatureSpan">nodebb.install.</span>setup
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.logger">module nodebb.logger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.logger.get">
+            function <span class="apidocSignatureSpan">nodebb.logger.</span>get
+            <span class="apidocSignatureSpan">(req, res)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.mongo">module nodebb.mongo</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.mongo.checkCompatibility">
+            function <span class="apidocSignatureSpan">nodebb.mongo.</span>checkCompatibility
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.mongo.close">
+            function <span class="apidocSignatureSpan">nodebb.mongo.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.mongo.info">
+            function <span class="apidocSignatureSpan">nodebb.mongo.</span>info
+            <span class="apidocSignatureSpan">(db, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.mongo.init">
+            function <span class="apidocSignatureSpan">nodebb.mongo.</span>init
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.mongo.</span>helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.mongo.</span>questions</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.navigation">module nodebb.navigation</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.navigation.get">
+            function <span class="apidocSignatureSpan">nodebb.navigation.</span>get
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.pagination">module nodebb.pagination</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.pagination.create">
+            function <span class="apidocSignatureSpan">nodebb.pagination.</span>create
+            <span class="apidocSignatureSpan">(currentPage, pageCount, queryObj)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.password">module nodebb.password</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.password.compare">
+            function <span class="apidocSignatureSpan">nodebb.password.</span>compare
+            <span class="apidocSignatureSpan">(password, hash, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.password.hash">
+            function <span class="apidocSignatureSpan">nodebb.password.</span>hash
+            <span class="apidocSignatureSpan">(rounds, password, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.ratelimit">module nodebb.ratelimit</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.ratelimit.isFlooding">
+            function <span class="apidocSignatureSpan">nodebb.ratelimit.</span>isFlooding
+            <span class="apidocSignatureSpan">(socket)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.redis">module nodebb.redis</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.redis.checkCompatibility">
+            function <span class="apidocSignatureSpan">nodebb.redis.</span>checkCompatibility
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.redis.close">
+            function <span class="apidocSignatureSpan">nodebb.redis.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.redis.connect">
+            function <span class="apidocSignatureSpan">nodebb.redis.</span>connect
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.redis.info">
+            function <span class="apidocSignatureSpan">nodebb.redis.</span>info
+            <span class="apidocSignatureSpan">(cxn, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.redis.init">
+            function <span class="apidocSignatureSpan">nodebb.redis.</span>init
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.redis.</span>helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.redis.</span>questions</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.rewards">module nodebb.rewards</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.rewards.get">
+            function <span class="apidocSignatureSpan">nodebb.rewards.</span>get
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.string">module nodebb.string</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.string.string">
+            function <span class="apidocSignatureSpan">nodebb.</span>string
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.string.extendPrototype">
+            function <span class="apidocSignatureSpan">nodebb.string.</span>extendPrototype
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.string.restorePrototype">
+            function <span class="apidocSignatureSpan">nodebb.string.</span>restorePrototype
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.string.</span>ENTITIES</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nodebb.string.</span>TMPL_CLOSE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nodebb.string.</span>TMPL_OPEN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nodebb.string.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.themes">module nodebb.themes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.themes.get">
+            function <span class="apidocSignatureSpan">nodebb.themes.</span>get
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.utils">module nodebb.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.addCommas">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>addCommas
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.addCommasToNumbers">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>addCommasToNumbers
+            <span class="apidocSignatureSpan">(elements)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.cleanUpTag">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>cleanUpTag
+            <span class="apidocSignatureSpan">(tag, maxLength)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.escapeHTML">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>escapeHTML
+            <span class="apidocSignatureSpan">(raw)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.escapeRegexChars">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>escapeRegexChars
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.extensionToMimeType">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>extensionToMimeType
+            <span class="apidocSignatureSpan">(extension)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.fileExtension">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>fileExtension
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.fileMimeType">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>fileMimeType
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.findBootstrapEnvironment">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>findBootstrapEnvironment
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.generateUUID">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>generateUUID
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.getDaysArray">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>getDaysArray
+            <span class="apidocSignatureSpan">(from)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.getHoursArray">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>getHoursArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.hasLanguageKey">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>hasLanguageKey
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.isAndroidBrowser">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>isAndroidBrowser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.isElementInViewport">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>isElementInViewport
+            <span class="apidocSignatureSpan">(el)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.isEmailValid">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>isEmailValid
+            <span class="apidocSignatureSpan">(email)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.isInternalURI">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>isInternalURI
+            <span class="apidocSignatureSpan">(targetLocation, referenceLocation, relative_path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.isMobile">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>isMobile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.isNumber">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>isNumber
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.isPasswordValid">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>isPasswordValid
+            <span class="apidocSignatureSpan">(password)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.isRelativeUrl">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>isRelativeUrl
+            <span class="apidocSignatureSpan">(url)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.isTouchDevice">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>isTouchDevice
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.isUserNameValid">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>isUserNameValid
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.makeNumberHumanReadable">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>makeNumberHumanReadable
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.makeNumbersHumanReadable">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>makeNumbersHumanReadable
+            <span class="apidocSignatureSpan">(elements)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.merge">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>merge
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.param">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>param
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.params">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>params
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.props">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>props
+            <span class="apidocSignatureSpan">(obj, props, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.removePunctuation">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>removePunctuation
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.slugify">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>slugify
+            <span class="apidocSignatureSpan">(str, preserveCase)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.toISOString">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>toISOString
+            <span class="apidocSignatureSpan">(timestamp)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.toType">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>toType
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.urlToLocation">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>urlToLocation
+            <span class="apidocSignatureSpan">(url)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.utils.walk">
+            function <span class="apidocSignatureSpan">nodebb.utils.</span>walk
+            <span class="apidocSignatureSpan">(dir, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.utils.</span>collapseDash</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.utils.</span>collapseWhitespace</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.utils.</span>extensionMimeTypeMap</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.utils.</span>invalidLatinChars</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.utils.</span>invalidUnicodeChars</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.utils.</span>isLatin</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.utils.</span>languageKeyRegex</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.utils.</span>stripTags</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.utils.</span>tags</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.utils.</span>trimLeadingDash</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.utils.</span>trimRegex</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodebb.utils.</span>trimTrailingDash</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.web">module nodebb.web</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.web.install">
+            function <span class="apidocSignatureSpan">nodebb.web.</span>install
+            <span class="apidocSignatureSpan">(port)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodebb.widgets">module nodebb.widgets</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodebb.widgets.get">
+            function <span class="apidocSignatureSpan">nodebb.widgets.</span>get
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb" id="apidoc.module.nodebb">module nodebb</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.string" id="apidoc.element.nodebb.string">
+        function <span class="apidocSignatureSpan">nodebb.</span>string
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function p(e){return new r(e)}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.appearance" id="apidoc.module.nodebb.appearance">module nodebb.appearance</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.appearance.get" id="apidoc.element.nodebb.appearance.get">
+        function <span class="apidocSignatureSpan">nodebb.appearance.</span>get
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (req, res, next) {
+	var term = req.params.term ? req.params.term : 'themes';
+
+	res.render('admin/appearance/' + term, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+global.env = process.env.NODE_ENV || 'production';
+
+winston.remove(winston.transports.Console);
+winston.add(winston.transports.Console, {
+	colorize: true,
+	timestamp: function () {
+		var date = new Date();
+		return (!!nconf.<span class="apidocCodeKeywordSpan">get</span>('json-logging')) ? date.toJSON() :	date.getDate() + &amp;#
+x27;/' + (date.getMonth() + 1) + ' ' + date.toTimeString().substr(0,5) + ' [' + global.process.pid + &amp;#
+x27;]';
+	},
+	level: nconf.get('log-level') || (global.env === 'production' ? 'info' : 'verbose'),
+	json: (!!nconf.get('json-logging')),
+	stringify: (!!nconf.get('json-logging'))
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.cache" id="apidoc.module.nodebb.cache">module nodebb.cache</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.cache.get" id="apidoc.element.nodebb.cache.get">
+        function <span class="apidocSignatureSpan">nodebb.cache.</span>get
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (req, res, next) {
+	var postCache = require('../../posts/cache');
+	var groupCache = require('../../groups').cache;
+
+	var avgPostSize = 0;
+	var percentFull = 0;
+	if (postCache.itemCount &gt; 0) {
+		avgPostSize = parseInt((postCache.length / postCache.itemCount), 10);
+		percentFull = ((postCache.length / postCache.max) * 100).toFixed(2);
+	}
+
+	res.render('admin/advanced/cache', {
+		postCache: {
+			length: postCache.length,
+			max: postCache.max,
+			itemCount: postCache.itemCount,
+			percentFull: percentFull,
+			avgPostSize: avgPostSize
+		},
+		groupCache: {
+			length: groupCache.length,
+			max: groupCache.max,
+			itemCount: groupCache.itemCount,
+			percentFull: ((groupCache.length / groupCache.max) * 100).toFixed(2),
+			dump: req.query.debug ? JSON.stringify(groupCache.dump(), null, 4) : false
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+global.env = process.env.NODE_ENV || 'production';
+
+winston.remove(winston.transports.Console);
+winston.add(winston.transports.Console, {
+	colorize: true,
+	timestamp: function () {
+		var date = new Date();
+		return (!!nconf.<span class="apidocCodeKeywordSpan">get</span>('json-logging')) ? date.toJSON() :	date.getDate() + &amp;#
+x27;/' + (date.getMonth() + 1) + ' ' + date.toTimeString().substr(0,5) + ' [' + global.process.pid + &amp;#
+x27;]';
+	},
+	level: nconf.get('log-level') || (global.env === 'production' ? 'info' : 'verbose'),
+	json: (!!nconf.get('json-logging')),
+	stringify: (!!nconf.get('json-logging'))
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.database" id="apidoc.module.nodebb.database">module nodebb.database</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.database.get" id="apidoc.element.nodebb.database.get">
+        function <span class="apidocSignatureSpan">nodebb.database.</span>get
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (req, res, next) {
+	async.parallel({
+		redis: function (next) {
+			if (nconf.get('redis')) {
+				var rdb = require('../../database/redis');
+				rdb.info(rdb.client, next);
+			} else {
+				next();
+			}
+		},
+		mongo: function (next) {
+			if (nconf.get('mongo')) {
+				var mdb = require('../../database/mongo');
+				mdb.info(mdb.client, next);
+			} else {
+				next();
+			}
+		}
+	}, function (err, results) {
+		if (err) {
+			return next(err);
+		}
+		res.render('admin/advanced/database', results);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+global.env = process.env.NODE_ENV || 'production';
+
+winston.remove(winston.transports.Console);
+winston.add(winston.transports.Console, {
+	colorize: true,
+	timestamp: function () {
+		var date = new Date();
+		return (!!nconf.<span class="apidocCodeKeywordSpan">get</span>('json-logging')) ? date.toJSON() :	date.getDate() + &amp;#
+x27;/' + (date.getMonth() + 1) + ' ' + date.toTimeString().substr(0,5) + ' [' + global.process.pid + &amp;#
+x27;]';
+	},
+	level: nconf.get('log-level') || (global.env === 'production' ? 'info' : 'verbose'),
+	json: (!!nconf.get('json-logging')),
+	stringify: (!!nconf.get('json-logging'))
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.emitter" id="apidoc.module.nodebb.emitter">module nodebb.emitter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.emitter.all" id="apidoc.element.nodebb.emitter.all">
+        function <span class="apidocSignatureSpan">nodebb.emitter.</span>all
+        <span class="apidocSignatureSpan">(events, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">all = function (events, callback) {
+	var eventList = events.slice(0);
+
+	events.forEach(function onEvent(event) {
+		eventEmitter.on(event, function () {
+			var index = eventList.indexOf(event);
+			if (index === -1) {
+				return;
+			}
+			eventList.splice(index, 1);
+			if (eventList.length === 0) {
+				callback();
+			}
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.emitter.any" id="apidoc.element.nodebb.emitter.any">
+        function <span class="apidocSignatureSpan">nodebb.emitter.</span>any
+        <span class="apidocSignatureSpan">(events, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">any = function (events, callback) {
+	events.forEach(function onEvent(event) {
+		eventEmitter.on(event, function () {
+			if (events !== null) {
+				callback();
+			}
+
+			events = null;
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.file" id="apidoc.module.nodebb.file">module nodebb.file</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.file.allowedExtensions" id="apidoc.element.nodebb.file.allowedExtensions">
+        function <span class="apidocSignatureSpan">nodebb.file.</span>allowedExtensions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">allowedExtensions = function () {
+	var meta = require('./meta');
+	var allowedExtensions = (meta.config.allowedFileExtensions || '').trim();
+	if (!allowedExtensions) {
+		return [];
+	}
+	allowedExtensions = allowedExtensions.split(',');
+	allowedExtensions = allowedExtensions.filter(Boolean).map(function (extension) {
+		extension = extension.trim();
+		if (!extension.startsWith('.')) {
+			extension = '.' + extension;
+		}
+		return extension;
+	});
+
+	if (allowedExtensions.indexOf('.jpg') !== -1 &amp;&amp; allowedExtensions.indexOf('.jpeg') === -1) {
+		allowedExtensions.push('.jpeg');
+	}
+
+	return allowedExtensions;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.file.base64ToLocal" id="apidoc.element.nodebb.file.base64ToLocal">
+        function <span class="apidocSignatureSpan">nodebb.file.</span>base64ToLocal
+        <span class="apidocSignatureSpan">(imageData, uploadPath, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">base64ToLocal = function (imageData, uploadPath, callback) {
+	var buffer = new Buffer(imageData.slice(imageData.indexOf('base64') + 7), 'base64');
+	uploadPath = path.join(nconf.get('base_dir'), nconf.get('upload_path'), uploadPath);
+
+	fs.writeFile(uploadPath, buffer, {
+		encoding: 'base64'
+	}, function (err) {
+		callback(err, uploadPath);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.file.exists" id="apidoc.element.nodebb.file.exists">
+        function <span class="apidocSignatureSpan">nodebb.file.</span>exists
+        <span class="apidocSignatureSpan">(path, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exists = function (path, callback) {
+	fs.stat(path, function (err, stat) {
+		callback(!err &amp;&amp; stat);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Minifier.js.minify = function (scripts, minify, callback) {
+
+	scripts = scripts.filter(function (file) {
+		return file &amp;&amp; file.endsWith('.js');
+	});
+
+	async.filter(scripts, function (script, next) {
+		file.<span class="apidocCodeKeywordSpan">exists</span>(script, function (exists) {
+			if (!exists) {
+				console.warn('[minifier] file not found, ' + script);
+			}
+			next(exists);
+		});
+	}, function (scripts) {
+		if (minify) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.file.existsSync" id="apidoc.element.nodebb.file.existsSync">
+        function <span class="apidocSignatureSpan">nodebb.file.</span>existsSync
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">existsSync = function (path) {
+	var exists = false;
+	try {
+		exists = fs.statSync(path);
+	} catch(err) {
+		exists = false;
+	}
+
+	return !!exists;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Alternate configuration file support
+var	configFile = path.join(__dirname, '/config.json');
+
+if (nconf.get('config')) {
+	configFile = path.resolve(__dirname, nconf.get('config'));
+}
+
+var configExists = file.<span class="apidocCodeKeywordSpan">existsSync</span>(configFile) || (nconf.get('url') &amp;&amp;#
+x26; nconf.get('secret') &amp;&amp; nconf.get('database'));
+
+loadConfig();
+versionCheck();
+
+if (!process.send) {
+	// If run using `node app`, log GNU copyright info along with server info
+	winston.info('NodeBB v' + nconf.get('version') + ' Copyright (C) 2013-' + (new Date()).getFullYear
+() + ' NodeBB Inc.');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.file.isFileTypeAllowed" id="apidoc.element.nodebb.file.isFileTypeAllowed">
+        function <span class="apidocSignatureSpan">nodebb.file.</span>isFileTypeAllowed
+        <span class="apidocSignatureSpan">(path, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isFileTypeAllowed = function (path, callback) {
+	var plugins = require('./plugins');
+	if (plugins.hasListeners('filter:file.isFileTypeAllowed')) {
+		return plugins.fireHook('filter:file.isFileTypeAllowed', path, function (err) {
+			callback(err);
+		});
+	}
+
+	// Attempt to read the file, if it passes, file type is allowed
+	jimp.read(path, function (err) {
+		callback(err);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.file.saveFileToLocal" id="apidoc.element.nodebb.file.saveFileToLocal">
+        function <span class="apidocSignatureSpan">nodebb.file.</span>saveFileToLocal
+        <span class="apidocSignatureSpan">(filename, folder, tempPath, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">saveFileToLocal = function (filename, folder, tempPath, callback) {
+	<span class="apidocCodeCommentSpan">/*
+	* remarkable doesn't allow spaces in hyperlinks, once that's fixed, remove this.
+	*/
+</span>	filename = filename.split('.');
+	filename.forEach(function (name, idx) {
+		filename[idx] = utils.slugify(name);
+	});
+	filename = filename.join('.');
+
+	var uploadPath = path.join(nconf.get('base_dir'), nconf.get('upload_path'), folder, filename);
+
+	winston.verbose('Saving file ' + filename + ' to : ' + uploadPath);
+
+	var is = fs.createReadStream(tempPath);
+	var os = fs.createWriteStream(uploadPath);
+	is.on('end', function () {
+		callback(null, {
+			url: nconf.get('upload_url') + '/' + folder + '/' + filename,
+			path: uploadPath
+		});
+	});
+
+	os.on('error', callback);
+
+	is.pipe(os);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.helpers" id="apidoc.module.nodebb.helpers">module nodebb.helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.helpers.setupPageRoute" id="apidoc.element.nodebb.helpers.setupPageRoute">
+        function <span class="apidocSignatureSpan">nodebb.helpers.</span>setupPageRoute
+        <span class="apidocSignatureSpan">(router, name, middleware, middlewares, controller)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setupPageRoute = function (router, name, middleware, middlewares, controller) {
+	middlewares = middlewares.concat([middleware.registrationComplete, middleware.pageView, middleware.pluginHooks]);
+
+	router.get(name, middleware.busyCheck, middleware.buildHeader, middlewares, controller);
+	router.get('/api' + name, middlewares, controller);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.hotswap" id="apidoc.module.nodebb.hotswap">module nodebb.hotswap</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.hotswap.find" id="apidoc.element.nodebb.hotswap.find">
+        function <span class="apidocSignatureSpan">nodebb.hotswap.</span>find
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">find = function (id) {
+	if (stack) {
+		for(var x = 0,numEntries = stack.length; x &lt; numEntries; x++) {
+			if (stack[x].handle.hotswapId === id) {
+				return x;
+			}
+		}
+	} else {
+		winston.error('[hotswap] HotSwap module has not been prepared!');
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		}
+	} else {
+		winston.error('[hotswap] HotSwap module has not been prepared!');
+	}
+};
+
+HotSwap.replace = function (id, router) {
+	var idx = HotSwap.<span class="apidocCodeKeywordSpan">find</span>(id);
+	if (idx) {
+		delete stack[idx].handle;	// Destroy the old router
+		stack[idx].handle = router;	// Replace with the new one
+		winston.verbose('[hotswap] Router with id `' + id + '` replaced successfully');
+	} else {
+		winston.warn('[hotswap] Could not find router in stack with hotswapId `' + id + '`');
+	}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.hotswap.prepare" id="apidoc.element.nodebb.hotswap.prepare">
+        function <span class="apidocSignatureSpan">nodebb.hotswap.</span>prepare
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prepare = function (app) {
+	stack = app._router.stack;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		if (Plugins.initialized) {
+			return callback();
+		}
+
+		if (nbbApp) {
+			app = nbbApp;
+			middleware = nbbMiddleware;
+			hotswap.<span class="apidocCodeKeywordSpan">prepare</span>(nbbApp);
+		}
+
+		if (global.env === 'development') {
+			winston.verbose('[plugins] Initializing plugins system');
+		}
+
+		Plugins.reload(function (err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.hotswap.replace" id="apidoc.element.nodebb.hotswap.replace">
+        function <span class="apidocSignatureSpan">nodebb.hotswap.</span>replace
+        <span class="apidocSignatureSpan">(id, router)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">replace = function (id, router) {
+	var idx = HotSwap.find(id);
+	if (idx) {
+		delete stack[idx].handle;	// Destroy the old router
+		stack[idx].handle = router;	// Replace with the new one
+		winston.verbose('[hotswap] Router with id `' + id + '` replaced successfully');
+	} else {
+		winston.warn('[hotswap] Could not find router in stack with hotswapId `' + id + '`');
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var urlObject = url.parse(nconf.get('url'));
+	var relativePath = urlObject.pathname !== '/' ? urlObject.pathname : '';
+	nconf.set('base_url', urlObject.protocol + '//' + urlObject.host);
+	nconf.set('secure', urlObject.protocol === 'https:');
+	nconf.set('use_port', !!urlObject.port);
+	nconf.set('relative_path', relativePath);
+	nconf.set('port', urlObject.port || nconf.get('port') || nconf.get('PORT') || (nconf.get('PORT_ENV_VAR
+') ? nconf.get(nconf.get('PORT_ENV_VAR')) : false) || 4567);
+	nconf.set('upload_url', nconf.get('upload_path').<span class="apidocCodeKeywordSpan">replace</span>(/^\/public
+/, ''));
+
+	if (nconf.get('isPrimary') === 'true') {
+		winston.info('Time: %s', (new Date()).toString());
+		winston.info('Initializing NodeBB v%s', nconf.get('version'));
+
+
+		var host = nconf.get(nconf.get('database') + ':host'),
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.install" id="apidoc.module.nodebb.install">module nodebb.install</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.install.save" id="apidoc.element.nodebb.install.save">
+        function <span class="apidocSignatureSpan">nodebb.install.</span>save
+        <span class="apidocSignatureSpan">(server_conf, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">save = function (server_conf, callback) {
+	var	serverConfigPath = path.join(__dirname, '../config.json');
+
+	if (nconf.get('config')) {
+		serverConfigPath = path.resolve(__dirname, '../', nconf.get('config'));
+	}
+
+	fs.writeFile(serverConfigPath, JSON.stringify(server_conf, null, 4), function (err) {
+		if (err) {
+			winston.error('Error saving server configuration! ' + err.message);
+			return callback(err);
+		}
+
+		process.stdout.write('Configuration Saved OK\n');
+
+		nconf.file({
+			file: path.join(__dirname, '..', 'config.json')
+		});
+
+		callback();
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		for(var prop in install.ciVals) {
+			if (install.ciVals.hasOwnProperty(prop)) {
+				config.test_database[prop] = install.ciVals[prop];
+			}
+		}
+	}
+
+	install.<span class="apidocCodeKeywordSpan">save</span>(config, function (err) {
+		if (err) {
+			return next(err);
+		}
+
+		require('./database').init(next);
+	});
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.install.setup" id="apidoc.element.nodebb.install.setup">
+        function <span class="apidocSignatureSpan">nodebb.install.</span>setup
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function (callback) {
+
+
+	async.series([
+		checkSetupFlag,
+		checkCIFlag,
+		setupConfig,
+		setupDefaultConfigs,
+		enableDefaultTheme,
+		createCategories,
+		createAdministrator,
+		createGlobalModeratorsGroup,
+		createMenuItems,
+		createWelcomePost,
+		enableDefaultPlugins,
+		setCopyrightWidget,
+		function (next) {
+			var upgrade = require('./upgrade');
+			upgrade.check(function (err, uptodate) {
+				if (err) {
+					return next(err);
+				}
+				if (!uptodate) { upgrade.upgrade(next); }
+				else { next(); }
+			});
+		}
+	], function (err, results) {
+		if (err) {
+			winston.warn('NodeBB Setup Aborted.\n ' + err.stack);
+			process.exit();
+		} else {
+			var data = {};
+			if (results[6]) {
+				data.username = results[6].username;
+				data.password = results[6].password;
+			}
+
+			callback(null, data);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+(function (Logger) {
+
+
+	Logger.init = function (app) {
+		opts.express.app = app;
+		/* Open log file stream &amp; initialize express logging if meta.config.logger* variables are set */
+		Logger.<span class="apidocCodeKeywordSpan">setup</span>();
+	};
+
+	Logger.setup = function () {
+		Logger.setup_one('loggerPath', meta.config.loggerPath);
+	};
+
+	Logger.setup_one = function (key, value) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.logger" id="apidoc.module.nodebb.logger">module nodebb.logger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.logger.get" id="apidoc.element.nodebb.logger.get">
+        function <span class="apidocSignatureSpan">nodebb.logger.</span>get
+        <span class="apidocSignatureSpan">(req, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (req, res) {
+	res.render('admin/development/logger', {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+global.env = process.env.NODE_ENV || 'production';
+
+winston.remove(winston.transports.Console);
+winston.add(winston.transports.Console, {
+	colorize: true,
+	timestamp: function () {
+		var date = new Date();
+		return (!!nconf.<span class="apidocCodeKeywordSpan">get</span>('json-logging')) ? date.toJSON() :	date.getDate() + &amp;#
+x27;/' + (date.getMonth() + 1) + ' ' + date.toTimeString().substr(0,5) + ' [' + global.process.pid + &amp;#
+x27;]';
+	},
+	level: nconf.get('log-level') || (global.env === 'production' ? 'info' : 'verbose'),
+	json: (!!nconf.get('json-logging')),
+	stringify: (!!nconf.get('json-logging'))
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.mongo" id="apidoc.module.nodebb.mongo">module nodebb.mongo</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.mongo.checkCompatibility" id="apidoc.element.nodebb.mongo.checkCompatibility">
+        function <span class="apidocSignatureSpan">nodebb.mongo.</span>checkCompatibility
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkCompatibility = function (callback) {
+		var mongoPkg = require.main.require('./node_modules/mongodb/package.json'),
+			err = semver.lt(mongoPkg.version, '2.0.0') ? new Error('The `mongodb` package is out-of-date, please run `./nodebb setup` again
+.') : null;
+
+		if (err) {
+			err.stacktrace = false;
+		}
+		callback(err);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.mongo.close" id="apidoc.element.nodebb.mongo.close">
+        function <span class="apidocSignatureSpan">nodebb.mongo.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function () {
+		db.close();
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		});
+	});
+}
+
+
+function shutdown(code) {
+	winston.info('[app] Shutdown (SIGTERM/SIGINT) Initialised.');
+	require('./src/database').<span class="apidocCodeKeywordSpan">close</span>();
+	winston.info('[app] Database connection closed.');
+	require('./src/webserver').server.close();
+	winston.info('[app] Web server closed to connections.');
+
+	winston.info('[app] Shutdown complete.');
+	process.exit(code || 0);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.mongo.info" id="apidoc.element.nodebb.mongo.info">
+        function <span class="apidocSignatureSpan">nodebb.mongo.</span>info
+        <span class="apidocSignatureSpan">(db, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function (db, callback) {
+		if (!db) {
+			return callback();
+		}
+		async.parallel({
+			serverStatus: function (next) {
+				db.command({'serverStatus': 1}, next);
+			},
+			stats: function (next) {
+				db.command({'dbStats': 1}, next);
+			},
+			listCollections: function (next) {
+				db.listCollections().toArray(function (err, items) {
+					if (err) {
+						return next(err);
+					}
+					async.map(items, function (collection, next) {
+						db.collection(collection.name).stats(next);
+					}, next);
+				});
+			}
+		}, function (err, results) {
+			if (err) {
+				return callback(err);
+			}
+			var stats = results.stats;
+			var scale = 1024 * 1024;
+
+			results.listCollections = results.listCollections.map(function (collectionInfo) {
+				return {
+					name: collectionInfo.ns,
+					count: collectionInfo.count,
+					size: collectionInfo.size,
+					avgObjSize: collectionInfo.avgObjSize,
+					storageSize: collectionInfo.storageSize,
+					totalIndexSize: collectionInfo.totalIndexSize,
+					indexSizes: collectionInfo.indexSizes
+				};
+			});
+
+			stats.mem = results.serverStatus.mem;
+			stats.collectionData = results.listCollections;
+			stats.network = results.serverStatus.network;
+			stats.raw = JSON.stringify(stats, null, 4);
+
+			stats.avgObjSize = stats.avgObjSize.toFixed(2);
+			stats.dataSize = (stats.dataSize / scale).toFixed(2);
+			stats.storageSize = (stats.storageSize / scale).toFixed(2);
+			stats.fileSize = stats.fileSize ? (stats.fileSize / scale).toFixed(2) : 0;
+			stats.indexSize = (stats.indexSize / scale).toFixed(2);
+			stats.storageEngine = results.serverStatus.storageEngine ? results.serverStatus.storageEngine.name : 'mmapv1';
+			stats.host = results.serverStatus.host;
+			stats.version = results.serverStatus.version;
+			stats.uptime = results.serverStatus.uptime;
+			stats.mongo = true;
+
+			callback(null, stats);
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var configExists = file.existsSync(configFile) || (nconf.get('url') &amp;&amp; nconf.get('secret') &amp;&amp;#
+x26; nconf.get('database'));
+
+loadConfig();
+versionCheck();
+
+if (!process.send) {
+	// If run using `node app`, log GNU copyright info along with server info
+	winston.<span class="apidocCodeKeywordSpan">info</span>('NodeBB v' + nconf.get('version') + ' Copyright
+ (C) 2013-' + (new Date()).getFullYear() + ' NodeBB Inc.');
+	winston.info('This program comes with ABSOLUTELY NO WARRANTY.');
+	winston.info('This is free software, and you are welcome to redistribute it under certain conditions.');
+	winston.info('');
+}
+
+
+if (nconf.get('setup') || nconf.get('install')) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.mongo.init" id="apidoc.element.nodebb.mongo.init">
+        function <span class="apidocSignatureSpan">nodebb.mongo.</span>init
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (callback) {
+		callback = callback || function () {};
+		var mongoClient;
+		try {
+			mongoClient = require('mongodb').MongoClient;
+		} catch (err) {
+			winston.error('Unable to initialize MongoDB! Is MongoDB installed? Error :' + err.message);
+			return callback(err);
+		}
+
+		var usernamePassword = '';
+		if (nconf.get('mongo:username') &amp;&amp; nconf.get('mongo:password')) {
+			usernamePassword = nconf.get('mongo:username') + ':' + encodeURIComponent(nconf.get('mongo:password')) + '@';
+		}
+
+		// Sensible defaults for Mongo, if not set
+		if (!nconf.get('mongo:host')) {
+			nconf.set('mongo:host', '127.0.0.1');
+		}
+		if (!nconf.get('mongo:port')) {
+			nconf.set('mongo:port', 27017);
+		}
+		if (!nconf.get('mongo:database')) {
+			nconf.set('mongo:database', 'nodebb');
+		}
+
+		var hosts = nconf.get('mongo:host').split(',');
+		var ports = nconf.get('mongo:port').toString().split(',');
+		var servers = [];
+
+		for (var i = 0; i &lt; hosts.length; i++) {
+			servers.push(hosts[i] + ':' + ports[i]);
+		}
+
+		var connString = 'mongodb://' + usernamePassword + servers.join() + '/' + nconf.get('mongo:database');
+
+		var connOptions = {
+			server: {
+				poolSize: parseInt(nconf.get('mongo:poolSize'), 10) || 10
+			}
+		};
+
+		connOptions = _.deepExtend((nconf.get('mongo:options') || {}), connOptions);
+
+		mongoClient.connect(connString, connOptions, function (err, _db) {
+			if (err) {
+				winston.error("NodeBB could not connect to your Mongo database. Mongo returned the following error: " + err.message);
+				return callback(err);
+			}
+
+			db = _db;
+
+			module.client = db;
+
+			require('./mongo/main')(db, module);
+			require('./mongo/hash')(db, module);
+			require('./mongo/sets')(db, module);
+			require('./mongo/sorted')(db, module);
+			require('./mongo/list')(db, module);
+
+			if (nconf.get('mongo:password') &amp;&amp; nconf.get('mongo:username')) {
+				db.authenticate(nconf.get('mongo:username'), nconf.get('mongo:password'), function (err) {
+					if (err) {
+						return callback(err);
+					}
+					createSessionStore();
+					createIndices();
+				});
+			} else {
+				winston.warn('You have no mongo password setup!');
+				createSessionStore();
+				createIndices();
+			}
+
+			function createSessionStore() {
+				var sessionStore;
+				if (nconf.get('redis')) {
+					sessionStore = require('connect-redis')(session);
+					var rdb = require('./redis');
+					rdb.client = rdb.connect();
+
+					module.sessionStore = new sessionStore({
+						client: rdb.client,
+						ttl: 60 * 60 * 24 * 14
+					});
+				} else if (nconf.get('mongo')) {
+					sessionStore = require('connect-mongo')(session);
+					module.sessionStore = new sessionStore({
+						db: db
+					});
+				}
+			}
+
+			function createIndices() {
+				winston.info('[database] Checking database indices.');
+				async.series([
+					async.apply(createIndex, 'objects', {_key: 1, score: -1}, {background: true}),
+					async.apply(createIndex, 'objects', {_key: 1, value: -1}, {background: true, unique: true, sparse: true}),
+					async.apply(createIndex, 'objects', {expireAt: 1}, {expireAfterSeconds: 0, background: true})
+				], function (err) {
+					if (err) {
+						winston.error('Error creating index ' + err.message);
+					}
+					winston.info('[database] Checking database indices done!');
+					callback(err);
+				});
+			}
+
+			function createIndex(collection, index, options, callback) {
+				db.collection(collection).createIndex(index, options, callback);
+			}
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		shutdown(1);
+	});
+
+	async.waterfall([
+		async.apply(db.init),
+		async.apply(db.checkCompatibility),
+		function (next) {
+			require('./src/meta').configs.<span class="apidocCodeKeywordSpan">init</span>(next);
+		},
+		function (next) {
+			if (nconf.get('dep-check') === undefined || nconf.get('dep-check') !== false) {
+				require('./src/meta').dependencies.check(next);
+			} else {
+				winston.warn('[init] Dependency checking skipped!');
+				setImmediate(next);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.navigation" id="apidoc.module.nodebb.navigation">module nodebb.navigation</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.navigation.get" id="apidoc.element.nodebb.navigation.get">
+        function <span class="apidocSignatureSpan">nodebb.navigation.</span>get
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (req, res, next) {
+	require('../../navigation/admin').getAdmin(function (err, data) {
+		if (err) {
+			return next(err);
+		}
+
+
+		data.enabled.forEach(function (enabled, index) {
+			enabled.index = index;
+			enabled.selected = index === 0;
+		});
+
+		data.navigation = data.enabled.slice();
+
+		res.render('admin/general/navigation', data);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+global.env = process.env.NODE_ENV || 'production';
+
+winston.remove(winston.transports.Console);
+winston.add(winston.transports.Console, {
+	colorize: true,
+	timestamp: function () {
+		var date = new Date();
+		return (!!nconf.<span class="apidocCodeKeywordSpan">get</span>('json-logging')) ? date.toJSON() :	date.getDate() + &amp;#
+x27;/' + (date.getMonth() + 1) + ' ' + date.toTimeString().substr(0,5) + ' [' + global.process.pid + &amp;#
+x27;]';
+	},
+	level: nconf.get('log-level') || (global.env === 'production' ? 'info' : 'verbose'),
+	json: (!!nconf.get('json-logging')),
+	stringify: (!!nconf.get('json-logging'))
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.pagination" id="apidoc.module.nodebb.pagination">module nodebb.pagination</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.pagination.create" id="apidoc.element.nodebb.pagination.create">
+        function <span class="apidocSignatureSpan">nodebb.pagination.</span>create
+        <span class="apidocSignatureSpan">(currentPage, pageCount, queryObj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (currentPage, pageCount, queryObj) {
+	if (pageCount &lt;= 1) {
+		return {
+			prev: {page: 1, active: currentPage &gt; 1},
+			next: {page: 1, active: currentPage &lt; pageCount},
+			rel: [],
+			pages: [],
+			currentPage: 1,
+			pageCount: 1
+		};
+	}
+	pageCount = parseInt(pageCount, 10);
+	var pagesToShow = [1, 2, pageCount - 1, pageCount];
+
+	currentPage = parseInt(currentPage, 10) || 1;
+	var previous = Math.max(1, currentPage - 1);
+	var next = Math.min(pageCount, currentPage + 1);
+
+	var startPage = Math.max(1, currentPage - 2);
+	if (startPage &gt; pageCount - 5) {
+		startPage -= 2 - (pageCount - currentPage);
+	}
+	for(var i = 0; i &lt; 5; ++i) {
+		pagesToShow.push(startPage + i);
+	}
+
+	pagesToShow = pagesToShow.filter(function (page, index, array) {
+		return page &gt; 0 &amp;&amp; page &lt;= pageCount &amp;&amp; array.indexOf(page) === index;
+	}).sort(function (a, b) {
+		return a - b;
+	});
+
+	queryObj = queryObj || {};
+
+	delete queryObj._;
+
+	var pages = pagesToShow.map(function (page) {
+		queryObj.page = page;
+		return {page: page, active: page === currentPage, qs: qs.stringify(queryObj)};
+	});
+
+	for (i = pages.length - 1; i &gt; 0; --i) {
+		if (pages[i].page - 2 === pages[i - 1].page) {
+			pages.splice(i, 0, {page: pages[i].page - 1, active: false, qs: qs.stringify(queryObj)});
+		} else if (pages[i].page - 1 !== pages[i - 1].page) {
+			pages.splice(i, 0, {separator: true});
+		}
+	}
+
+	var data = {rel: [], pages: pages, currentPage: currentPage, pageCount: pageCount};
+	queryObj.page = previous;
+	data.prev = {page: previous, active: currentPage &gt; 1, qs: qs.stringify(queryObj)};
+	queryObj.page = next;
+	data.next = {page: next, active: currentPage &lt; pageCount, qs: qs.stringify(queryObj)};
+
+	if (currentPage &lt; pageCount) {
+		data.rel.push({
+			rel: 'next',
+			href: '?page=' + next
+		});
+	}
+
+	if (currentPage &gt; 1) {
+		data.rel.push({
+			rel: 'prev',
+			href: '?page=' + previous
+		});
+	}
+	return data;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			if (results['password:confirm'] !== results.password) {
+				winston.warn("Passwords did not match, please try again");
+				return retryPassword(results);
+			}
+			var adminUid;
+			async.waterfall([
+				function (next) {
+					User.<span class="apidocCodeKeywordSpan">create</span>({username: results.username, password: results.password, email: results
+.email}, next);
+				},
+				function (uid, next) {
+					adminUid = uid;
+					Groups.join('administrators', uid, next);
+				},
+				function (next) {
+					Groups.show('administrators', next);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.password" id="apidoc.module.nodebb.password">module nodebb.password</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.password.compare" id="apidoc.element.nodebb.password.compare">
+        function <span class="apidocSignatureSpan">nodebb.password.</span>compare
+        <span class="apidocSignatureSpan">(password, hash, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compare = function (password, hash, callback) {
+		forkChild({type: 'compare', password: password, hash: hash}, callback);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	async = require('async');
+
+
+process.on('message', function (msg) {
+	if (msg.type === 'hash') {
+		hashPassword(msg.password, msg.rounds);
+	} else if (msg.type === 'compare') {
+		bcrypt.<span class="apidocCodeKeywordSpan">compare</span>(msg.password, msg.hash, done);
+	}
+});
+
+function hashPassword(password, rounds) {
+	async.waterfall([
+		function (next) {
+			bcrypt.genSalt(parseInt(rounds, 10), next);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.password.hash" id="apidoc.element.nodebb.password.hash">
+        function <span class="apidocSignatureSpan">nodebb.password.</span>hash
+        <span class="apidocSignatureSpan">(rounds, password, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hash = function (rounds, password, callback) {
+		forkChild({type: 'hash', rounds: rounds, password: password}, callback);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function hashPassword(password, rounds) {
+	async.waterfall([
+		function (next) {
+			bcrypt.genSalt(parseInt(rounds, 10), next);
+		},
+		function (salt, next) {
+			bcrypt.<span class="apidocCodeKeywordSpan">hash</span>(password, salt, next);
+		}
+	], done);
+}
+
+function done(err, result) {
+	if (err) {
+		process.send({err: err.message});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.ratelimit" id="apidoc.module.nodebb.ratelimit">module nodebb.ratelimit</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.ratelimit.isFlooding" id="apidoc.element.nodebb.ratelimit.isFlooding">
+        function <span class="apidocSignatureSpan">nodebb.ratelimit.</span>isFlooding
+        <span class="apidocSignatureSpan">(socket)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isFlooding = function (socket) {
+	socket.callsPerSecond = socket.callsPerSecond || 0;
+	socket.elapsedTime = socket.elapsedTime || 0;
+	socket.lastCallTime = socket.lastCallTime || Date.now();
+
+	++socket.callsPerSecond;
+
+	var now = Date.now();
+	socket.elapsedTime += now - socket.lastCallTime;
+
+	if (socket.callsPerSecond &gt; allowedCalls &amp;&amp; socket.elapsedTime &lt; timeframe) {
+		winston.warn('Flooding detected! Calls : ' + socket.callsPerSecond + ', Duration : ' + socket.elapsedTime);
+		return true;
+	}
+
+	if (socket.elapsedTime &gt;= timeframe) {
+		socket.elapsedTime = 0;
+		socket.callsPerSecond = 0;
+	}
+
+	socket.lastCallTime = now;
+	return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.redis" id="apidoc.module.nodebb.redis">module nodebb.redis</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.redis.checkCompatibility" id="apidoc.element.nodebb.redis.checkCompatibility">
+        function <span class="apidocSignatureSpan">nodebb.redis.</span>checkCompatibility
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkCompatibility = function (callback) {
+		module.info(module.client, function (err, info) {
+			if (err) {
+				return callback(err);
+			}
+
+			if (semver.lt(info.redis_version, '2.8.9')) {
+				err = new Error('Your Redis version is not new enough to support NodeBB, please upgrade Redis to v2.8.9 or higher.');
+				err.stacktrace = false;
+			}
+
+			callback(err);
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.redis.close" id="apidoc.element.nodebb.redis.close">
+        function <span class="apidocSignatureSpan">nodebb.redis.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function () {
+		redisClient.quit();
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		});
+	});
+}
+
+
+function shutdown(code) {
+	winston.info('[app] Shutdown (SIGTERM/SIGINT) Initialised.');
+	require('./src/database').<span class="apidocCodeKeywordSpan">close</span>();
+	winston.info('[app] Database connection closed.');
+	require('./src/webserver').server.close();
+	winston.info('[app] Web server closed to connections.');
+
+	winston.info('[app] Shutdown complete.');
+	process.exit(code || 0);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.redis.connect" id="apidoc.element.nodebb.redis.connect">
+        function <span class="apidocSignatureSpan">nodebb.redis.</span>connect
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function (options) {
+		var redis_socket_or_host = nconf.get('redis:host');
+		var cxn;
+
+		if (!redis) {
+			redis = require('redis');
+		}
+
+		options = options || {};
+		if (nconf.get('redis:password')) {
+			options.auth_pass = nconf.get('redis:password');
+		}
+
+		if (redis_socket_or_host &amp;&amp; redis_socket_or_host.indexOf('/') &gt;= 0) {
+			<span class="apidocCodeCommentSpan">/* If redis.host contains a path name character, use the unix dom sock connection. ie, /tmp/redis.sock */
+</span>			cxn = redis.createClient(nconf.get('redis:host'), options);
+		} else {
+			/* Else, connect over tcp/ip */
+			cxn = redis.createClient(nconf.get('redis:port'), nconf.get('redis:host'), options);
+		}
+
+		cxn.on('error', function (err) {
+			winston.error(err.stack);
+			process.exit(1);
+		});
+
+		if (nconf.get('redis:password')) {
+			cxn.auth(nconf.get('redis:password'));
+		}
+
+		var dbIdx = parseInt(nconf.get('redis:database'), 10);
+		if (dbIdx) {
+			cxn.select(dbIdx, function (error) {
+				if(error) {
+					winston.error("NodeBB could not connect to your Redis database. Redis returned the following error: " + error.message);
+					process.exit();
+				}
+			});
+		}
+
+		return cxn;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var channelName;
+
+var PubSub = function () {
+	var self = this;
+	if (nconf.get('redis')) {
+		var redis = require('./database/redis');
+		var subClient = redis.<span class="apidocCodeKeywordSpan">connect</span>();
+		this.pubClient = redis.connect();
+
+		channelName = 'db:' + nconf.get('redis:database') + 'pubsub_channel';
+		subClient.subscribe(channelName);
+
+		subClient.on('message', function (channel, message) {
+			if (channel !== channelName) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.redis.info" id="apidoc.element.nodebb.redis.info">
+        function <span class="apidocSignatureSpan">nodebb.redis.</span>info
+        <span class="apidocSignatureSpan">(cxn, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function (cxn, callback) {
+		if (!cxn) {
+			return callback();
+		}
+		cxn.info(function (err, data) {
+			if (err) {
+				return callback(err);
+			}
+
+			var lines = data.toString().split("\r\n").sort();
+			var redisData = {};
+			lines.forEach(function (line) {
+				var parts = line.split(':');
+				if (parts[1]) {
+					redisData[parts[0]] = parts[1];
+				}
+			});
+
+			redisData.raw = JSON.stringify(redisData, null, 4);
+			redisData.redis = true;
+
+			callback(null, redisData);
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var configExists = file.existsSync(configFile) || (nconf.get('url') &amp;&amp; nconf.get('secret') &amp;&amp;#
+x26; nconf.get('database'));
+
+loadConfig();
+versionCheck();
+
+if (!process.send) {
+	// If run using `node app`, log GNU copyright info along with server info
+	winston.<span class="apidocCodeKeywordSpan">info</span>('NodeBB v' + nconf.get('version') + ' Copyright
+ (C) 2013-' + (new Date()).getFullYear() + ' NodeBB Inc.');
+	winston.info('This program comes with ABSOLUTELY NO WARRANTY.');
+	winston.info('This is free software, and you are welcome to redistribute it under certain conditions.');
+	winston.info('');
+}
+
+
+if (nconf.get('setup') || nconf.get('install')) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.redis.init" id="apidoc.element.nodebb.redis.init">
+        function <span class="apidocSignatureSpan">nodebb.redis.</span>init
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (callback) {
+		try {
+			redis = require('redis');
+			connectRedis = require('connect-redis')(session);
+		} catch (err) {
+			winston.error('Unable to initialize Redis! Is Redis installed? Error :' + err.message);
+			process.exit();
+		}
+
+		redisClient = module.connect();
+
+		module.client = redisClient;
+
+		module.sessionStore = new connectRedis({
+			client: redisClient,
+			ttl: 60 * 60 * 24 * 14
+		});
+
+		require('./redis/main')(redisClient, module);
+		require('./redis/hash')(redisClient, module);
+		require('./redis/sets')(redisClient, module);
+		require('./redis/sorted')(redisClient, module);
+		require('./redis/list')(redisClient, module);
+
+		if (typeof callback === 'function') {
+			callback();
+		}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		shutdown(1);
+	});
+
+	async.waterfall([
+		async.apply(db.init),
+		async.apply(db.checkCompatibility),
+		function (next) {
+			require('./src/meta').configs.<span class="apidocCodeKeywordSpan">init</span>(next);
+		},
+		function (next) {
+			if (nconf.get('dep-check') === undefined || nconf.get('dep-check') !== false) {
+				require('./src/meta').dependencies.check(next);
+			} else {
+				winston.warn('[init] Dependency checking skipped!');
+				setImmediate(next);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.rewards" id="apidoc.module.nodebb.rewards">module nodebb.rewards</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.rewards.get" id="apidoc.element.nodebb.rewards.get">
+        function <span class="apidocSignatureSpan">nodebb.rewards.</span>get
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (req, res, next) {
+	require('../../rewards/admin').get(function (err, data) {
+		if (err) {
+			return next(err);
+		}
+
+		res.render('admin/extend/rewards', data);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+global.env = process.env.NODE_ENV || 'production';
+
+winston.remove(winston.transports.Console);
+winston.add(winston.transports.Console, {
+	colorize: true,
+	timestamp: function () {
+		var date = new Date();
+		return (!!nconf.<span class="apidocCodeKeywordSpan">get</span>('json-logging')) ? date.toJSON() :	date.getDate() + &amp;#
+x27;/' + (date.getMonth() + 1) + ' ' + date.toTimeString().substr(0,5) + ' [' + global.process.pid + &amp;#
+x27;]';
+	},
+	level: nconf.get('log-level') || (global.env === 'production' ? 'info' : 'verbose'),
+	json: (!!nconf.get('json-logging')),
+	stringify: (!!nconf.get('json-logging'))
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.string" id="apidoc.module.nodebb.string">module nodebb.string</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.string.string" id="apidoc.element.nodebb.string.string">
+        function <span class="apidocSignatureSpan">nodebb.</span>string
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function p(e){return new r(e)}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.string.extendPrototype" id="apidoc.element.nodebb.string.extendPrototype">
+        function <span class="apidocSignatureSpan">nodebb.string.</span>extendPrototype
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function u(){for(var e in s)(function(e){var t=s[e];i.hasOwnProperty(e)||(o.push(e),i[e]=function(){return String.prototype.s=this
+,t.apply(this,arguments)})})(e)}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.string.restorePrototype" id="apidoc.element.nodebb.string.restorePrototype">
+        function <span class="apidocSignatureSpan">nodebb.string.</span>restorePrototype
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function a(){for(var e=0;e&lt;o.length;++e)delete String.prototype[o[e]];o.length=0}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.themes" id="apidoc.module.nodebb.themes">module nodebb.themes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.themes.get" id="apidoc.element.nodebb.themes.get">
+        function <span class="apidocSignatureSpan">nodebb.themes.</span>get
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (req, res, next) {
+	var themeDir = path.join(__dirname, '../../../node_modules/' + req.params.theme);
+	file.exists(themeDir, function (exists) {
+		if (!exists) {
+			return next();
+		}
+
+		var themeConfig = require(path.join(themeDir, 'theme.json')),
+			screenshotPath = path.join(themeDir, themeConfig.screenshot);
+		if (themeConfig.screenshot &amp;&amp; file.existsSync(screenshotPath)) {
+			res.sendFile(screenshotPath);
+		} else {
+			res.sendFile(path.join(__dirname, '../../../public/images/themes/default.png'));
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+global.env = process.env.NODE_ENV || 'production';
+
+winston.remove(winston.transports.Console);
+winston.add(winston.transports.Console, {
+	colorize: true,
+	timestamp: function () {
+		var date = new Date();
+		return (!!nconf.<span class="apidocCodeKeywordSpan">get</span>('json-logging')) ? date.toJSON() :	date.getDate() + &amp;#
+x27;/' + (date.getMonth() + 1) + ' ' + date.toTimeString().substr(0,5) + ' [' + global.process.pid + &amp;#
+x27;]';
+	},
+	level: nconf.get('log-level') || (global.env === 'production' ? 'info' : 'verbose'),
+	json: (!!nconf.get('json-logging')),
+	stringify: (!!nconf.get('json-logging'))
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.utils" id="apidoc.module.nodebb.utils">module nodebb.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.addCommas" id="apidoc.element.nodebb.utils.addCommas">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>addCommas
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addCommas = function (text) {
+			return text.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	it('should make number human readable', function (done) {
+		assert.equal(utils.makeNumberHumanReadable(null), null);
+		done();
+	});
+
+	it('should add commas to numbers', function (done) {
+		assert.equal(utils.<span class="apidocCodeKeywordSpan">addCommas</span>('100'), '100');
+		done();
+	});
+
+	it('should add commas to numbers', function (done) {
+		assert.equal(utils.addCommas('1000'), '1,000');
+		done();
+	});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.addCommasToNumbers" id="apidoc.element.nodebb.utils.addCommasToNumbers">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>addCommasToNumbers
+        <span class="apidocSignatureSpan">(elements)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addCommasToNumbers = function (elements) {
+			elements.each(function (index, element) {
+				$(element).html(utils.addCommas($(element).html()));
+			});
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	app.processPage = function () {
+		highlightNavigationLink();
+
+		$('.timeago').timeago();
+
+		utils.makeNumbersHumanReadable($('.human-readable-number'));
+
+		utils.<span class="apidocCodeKeywordSpan">addCommasToNumbers</span>($('.formatted-number'));
+
+		app.createUserTooltips();
+
+		app.createStatusTooltips();
+
+		app.replaceSelfLinks();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.cleanUpTag" id="apidoc.element.nodebb.utils.cleanUpTag">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>cleanUpTag
+        <span class="apidocSignatureSpan">(tag, maxLength)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cleanUpTag = function (tag, maxLength) {
+			if (typeof tag !== 'string' || !tag.length ) {
+				return '';
+			}
+
+			tag = tag.trim().toLowerCase();
+			// see https://github.com/NodeBB/NodeBB/issues/4378
+			tag = tag.replace(/\u202E/gi, '');
+			tag = tag.replace(/[,\/#!$%\^\*;:{}=_`&lt;&gt;'"~()?\|]/g, '');
+			tag = tag.substr(0, maxLength || 15).trim();
+			var matches = tag.match(/^[.-]*(.+?)[.-]*$/);
+			if (matches &amp;&amp; matches.length &gt; 1) {
+				tag = matches[1];
+			}
+			return tag;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				uuid2 = utils.generateUUID();
+			assert.notEqual(uuid1, uuid2, 'matches');
+		});
+	});
+
+	describe('cleanUpTag', function () {
+		it('should cleanUp a tag', function (done) {
+			var cleanedTag = utils.<span class="apidocCodeKeywordSpan">cleanUpTag</span>(',\/#!$%\^\*;TaG1:{}=_`&lt;&gt;\'&amp;#
+x22;~()?\|');
+			assert.equal(cleanedTag, 'tag1');
+			done();
+		});
+
+		it('should return empty string for invalid tags', function (done) {
+			assert.strictEqual(utils.cleanUpTag(undefined), '');
+			assert.strictEqual(utils.cleanUpTag(null), '');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.escapeHTML" id="apidoc.element.nodebb.utils.escapeHTML">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>escapeHTML
+        <span class="apidocSignatureSpan">(raw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeHTML = function (raw) {
+			return raw.replace(/&amp;/gm,"&amp;amp;").replace(/&lt;/gm,"&amp;lt;").replace(/&gt;/gm,"&amp;gt;");
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				if (err) {
+					return callback(err);
+				}
+				notifications.forEach(function (notification, index) {
+					notification.datetimeISO = utils.toISOString(notification.datetime);
+
+					if (notification.bodyLong) {
+						notification.bodyLong = S(notification.bodyLong).<span class="apidocCodeKeywordSpan">escapeHTML</span>().s;
+					}
+
+					notification.user = usersData[index];
+					if (notification.user) {
+						notification.image = notification.user.picture || null;
+						if (notification.user.username === '[[global:guest]]') {
+							notification.bodyShort = notification.bodyShort.replace(/([\s\S]*?),[\s\S]*?,([\s\S]*?)/, '$1, [[global:guest]], $2&amp;#
+x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.escapeRegexChars" id="apidoc.element.nodebb.utils.escapeRegexChars">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>escapeRegexChars
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeRegexChars = function (text) {
+			return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&amp;");
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.extensionToMimeType" id="apidoc.element.nodebb.utils.extensionToMimeType">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>extensionToMimeType
+        <span class="apidocSignatureSpan">(extension)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extensionToMimeType = function (extension) {
+			return utils.extensionMimeTypeMap[extension] || '*';
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			"tiff": "image/tiff",
+			"xbm": "image/x-xbitmap",
+			"xpm": "image/x-xpixmap",
+			"xwd": "image/x-xwindowdump"
+		},
+
+		fileMimeType: function (path) {
+			return utils.<span class="apidocCodeKeywordSpan">extensionToMimeType</span>(utils.fileExtension(path));
+		},
+
+		extensionToMimeType: function (extension) {
+			return utils.extensionMimeTypeMap[extension] || '*';
+		},
+
+		isRelativeUrl: function (url) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.fileExtension" id="apidoc.element.nodebb.utils.fileExtension">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>fileExtension
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fileExtension = function (path) {
+			return ('' + path).split('.').pop();
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		assert.strictEqual(obj.baz, 2);
+		assert.strictEqual(obj.cat1, 'ginger');
+		assert.strictEqual(obj.cat2, 'phoebe');
+		done();
+	});
+
+	it('should return the file extesion', function (done) {
+		assert.equal(utils.<span class="apidocCodeKeywordSpan">fileExtension</span>('/path/to/some/file.png'), 'png'
+;);
+		done();
+	});
+
+	it('should return file mime type', function (done) {
+		assert.equal(utils.fileMimeType('/path/to/some/file.png'), 'image/png');
+		done();
+	});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.fileMimeType" id="apidoc.element.nodebb.utils.fileMimeType">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>fileMimeType
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fileMimeType = function (path) {
+			return utils.extensionToMimeType(utils.fileExtension(path));
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	it('should return the file extesion', function (done) {
+		assert.equal(utils.fileExtension('/path/to/some/file.png'), 'png');
+		done();
+	});
+
+	it('should return file mime type', function (done) {
+		assert.equal(utils.<span class="apidocCodeKeywordSpan">fileMimeType</span>('/path/to/some/file.png'), 'image/png
+');
+		done();
+	});
+
+	it('should check if url is relative', function (done) {
+		assert.equal(utils.isRelativeUrl('/topic/1/slug'), true);
+		done();
+	});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.findBootstrapEnvironment" id="apidoc.element.nodebb.utils.findBootstrapEnvironment">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>findBootstrapEnvironment
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findBootstrapEnvironment = function () {
+			//http://stackoverflow.com/questions/14441456/how-to-detect-which-device-view-youre-on-using-twitter-bootstrap-api
+			var envs = ['xs', 'sm', 'md', 'lg'],
+				$el = $('&lt;div&gt;');
+
+			$el.appendTo($('body'));
+
+			for (var i = envs.length - 1; i &gt;= 0; i--) {
+				var env = envs[i];
+
+				$el.addClass('hidden-' + env);
+				if ($el.is(':hidden')) {
+					$el.remove();
+					return env;
+				}
+			}
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		var navbarEl = $('.navbar');
+		if (navbarEl) {
+			navbarEl.toggleClass('hidden', !!!state);
+		}
+	};
+
+	function createHeaderTooltips() {
+		var env = utils.<span class="apidocCodeKeywordSpan">findBootstrapEnvironment</span>();
+		if (env === 'xs' || env === 'sm') {
+			return;
+		}
+		$('#header-menu li a[title]').each(function () {
+			if (!utils.isTouchDevice()) {
+				$(this).tooltip({
+					placement: 'bottom',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.generateUUID" id="apidoc.element.nodebb.utils.generateUUID">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>generateUUID
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateUUID = function () {
+			return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+				var r = Math.random() * 16 | 0,
+					v = c === 'x' ? r : (r &amp; 0x3 | 0x8);
+				return v.toString(16);
+			});
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			'http://localhost:4567',
+		pattern: /^http(?:s)?:\/\//,
+		message: 'Base URL must begin with \'http://\' or \'https://\'',
+	},
+	{
+		name: 'secret',
+		description: 'Please enter a NodeBB secret',
+		'default': nconf.get('secret') || utils.<span class="apidocCodeKeywordSpan">generateUUID</span>()
+	},
+	{
+		name: 'database',
+		description: 'Which database to use',
+		'default': nconf.get('database') || 'mongo'
+	}
+];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.getDaysArray" id="apidoc.element.nodebb.utils.getDaysArray">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>getDaysArray
+        <span class="apidocSignatureSpan">(from)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDaysArray = function (from) {
+			var currentDay = new Date(from || Date.now()).getTime(),
+				months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+				labels = [],
+				tmpDate;
+
+			for(var x = 29; x &gt;= 0; x--) {
+				tmpDate = new Date(currentDay - (1000 * 60 * 60 * 24 * x));
+				labels.push(months[tmpDate.getMonth()] + ' ' + tmpDate.getDate());
+			}
+
+			return labels;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.getHoursArray" id="apidoc.element.nodebb.utils.getHoursArray">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>getHoursArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHoursArray = function () {
+			var currentHour = new Date().getHours(),
+				labels = [];
+
+			for (var i = currentHour, ii = currentHour - 24; i &gt; ii; i--) {
+				var hour = i &lt; 0 ? 24 + i : i;
+				labels.push(hour + ':00');
+			}
+
+			return labels.reverse();
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.hasLanguageKey" id="apidoc.element.nodebb.utils.hasLanguageKey">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>hasLanguageKey
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasLanguageKey = function (input) {
+			return utils.languageKeyRegex.test(input);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	it('should remove punctuation', function (done) {
+		var removed = utils.removePunctuation('some text with , ! punctuation inside "');
+		assert.equal(removed, 'some text with   punctuation inside ');
+		done();
+	});
+
+	it('should return true if string has language key', function (done) {
+		assert.equal(utils.<span class="apidocCodeKeywordSpan">hasLanguageKey</span>('some text [[topic:title]] and [[user:reputaiton
+]]'), true);
+		done();
+	});
+
+	it('should return false if string does not have language key', function (done) {
+		assert.equal(utils.hasLanguageKey('some text with no language keys'), false);
+		done();
+	});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.isAndroidBrowser" id="apidoc.element.nodebb.utils.isAndroidBrowser">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>isAndroidBrowser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isAndroidBrowser = function () {
+			// http://stackoverflow.com/questions/9286355/how-to-detect-only-the-native-android-browser
+			var nua = navigator.userAgent;
+			return ((nua.indexOf('Mozilla/5.0') &gt; -1 &amp;&amp; nua.indexOf('Android ') &gt; -1 &amp;&amp; nua.indexOf('AppleWebKit') &gt; -1) &amp;&amp; !(nua.indexOf
+('Chrome') &gt; -1));
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.isElementInViewport" id="apidoc.element.nodebb.utils.isElementInViewport">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>isElementInViewport
+        <span class="apidocSignatureSpan">(el)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isElementInViewport = function (el) {
+			//special bonus for those using jQuery
+			if (typeof jQuery === "function" &amp;&amp; el instanceof jQuery) {
+				el = el[0];
+			}
+
+			var rect = el.getBoundingClientRect();
+
+			return (
+				rect.top &gt;= 0 &amp;&amp;
+				rect.left &gt;= 0 &amp;&amp;
+				rect.bottom &lt;= (window.innerHeight || document.documentElement.clientHeight) &amp;&amp;<span class="apidocCodeCommentSpan"> /*or $(window).height() */
+</span>				rect.right &lt;= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+			);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.isEmailValid" id="apidoc.element.nodebb.utils.isEmailValid">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>isEmailValid
+        <span class="apidocSignatureSpan">(email)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEmailValid = function (email) {
+			return typeof email === 'string' &amp;&amp; email.length &amp;&amp; email.indexOf('@') !== -1;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			assert.ifError(utils.isUserNameValid(username), 'accepted as valid username');
+		});
+	});
+
+	describe('email validation', function () {
+		it('accepts sample address', function () {
+			var email = 'sample@example.com';
+			assert(utils.<span class="apidocCodeKeywordSpan">isEmailValid</span>(email), 'invalid email');
+		});
+		it('rejects empty address', function () {
+			var email = '';
+			assert.ifError(utils.isEmailValid(email), 'accepted as valid email');
+		});
+	});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.isInternalURI" id="apidoc.element.nodebb.utils.isInternalURI">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>isInternalURI
+        <span class="apidocSignatureSpan">(targetLocation, referenceLocation, relative_path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isInternalURI = function (targetLocation, referenceLocation, relative_path) {
+			return targetLocation.host === '' ||	// Relative paths are always internal links
+				(
+					targetLocation.host === referenceLocation.host &amp;&amp; targetLocation.protocol === referenceLocation.protocol &amp;&amp;	// Otherwise need
+ to check if protocol and host match
+					(relative_path.length &gt; 0 ? targetLocation.pathname.indexOf(relative_path) === 0 : true)	// Subfolder installs need this additional
+ check
+				);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				}
+			};
+
+			if (this.target !== '' || (this.protocol !== 'http:' &amp;&amp; this.protocol !== 'https:')) {
+				return;
+			}
+
+			var internalLink = utils.<span class="apidocCodeKeywordSpan">isInternalURI</span>(this, window.location, RELATIVE_PATH);
+
+			if ($(this).attr('data-ajaxify') === 'false') {
+				if (!internalLink) {
+					return;
+				} else {
+					return e.preventDefault();
+				}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.isMobile" id="apidoc.element.nodebb.utils.isMobile">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>isMobile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isMobile = function () {
+			var env = utils.findBootstrapEnvironment();
+			return ['xs', 'sm'].some(function (targetEnv) {
+				return targetEnv === env;
+			});
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			}
+		});
+
+		$.get(config.relative_path + '/api/widgets/render' + (config['cache-buster'] ? '?v=' + config[&amp;#
+x27;cache-buster'] : ''), {
+			locations: widgetLocations,
+			template: template + '.tpl',
+			url: url,
+			isMobile: utils.<span class="apidocCodeKeywordSpan">isMobile</span>()
+		}, function (renderedAreas) {
+			for (var x = 0; x &lt; renderedAreas.length; ++x) {
+				var renderedWidgets = renderedAreas[x].widgets;
+				var location = renderedAreas[x].location;
+				var html = '';
+
+				for (var i = 0; i &lt; renderedWidgets.length; ++i) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.isNumber" id="apidoc.element.nodebb.utils.isNumber">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>isNumber
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isNumber = function (n) {
+			return !isNaN(parseFloat(n)) &amp;&amp; isFinite(n);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	options = options || {};
+
+	if (typeof process !== 'function') {
+		return callback(new Error('[[error:process-not-a-function]]'));
+	}
+
+	// use the fast path if possible
+	if (db.processSortedSet &amp;&amp; typeof options.doneIf !== 'function' &amp;&amp; !utils.<span class="apidocCodeKeywordSpan
+">isNumber</span>(options.alwaysStartAt)) {
+		return db.processSortedSet(setKey, process, options.batch || DEFAULT_BATCH_SIZE, callback);
+	}
+
+	// custom done condition
+	options.doneIf = typeof options.doneIf === 'function' ? options.doneIf : function () {};
+
+	var batch = options.batch || DEFAULT_BATCH_SIZE;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.isPasswordValid" id="apidoc.element.nodebb.utils.isPasswordValid">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>isPasswordValid
+        <span class="apidocSignatureSpan">(password)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isPasswordValid = function (password) {
+			return typeof password === 'string' &amp;&amp; password.length;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				return next(new Error('[[error:username-too-short]]'));
+			}
+
+			if (userData.username.length &gt; meta.config.maximumUsernameLength) {
+				return next(new Error('[[error:username-too-long'));
+			}
+
+			user.<span class="apidocCodeKeywordSpan">isPasswordValid</span>(userData.password, next);
+		},
+		function (next) {
+			if (registrationType === 'normal' || registrationType === 'invite-only' || registrationType === 'admin
+-invite-only') {
+				next(null, false);
+			} else if (registrationType === 'admin-approval') {
+				next(null, true);
+			} else if (registrationType === 'admin-approval-ip') {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.isRelativeUrl" id="apidoc.element.nodebb.utils.isRelativeUrl">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>isRelativeUrl
+        <span class="apidocSignatureSpan">(url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRelativeUrl = function (url) {
+			var firstChar = url.slice(0, 1);
+			return (firstChar === '.' || firstChar === '/');
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	it('should return file mime type', function (done) {
+		assert.equal(utils.fileMimeType('/path/to/some/file.png'), 'image/png');
+		done();
+	});
+
+	it('should check if url is relative', function (done) {
+		assert.equal(utils.<span class="apidocCodeKeywordSpan">isRelativeUrl</span>('/topic/1/slug'), true);
+		done();
+	});
+
+	it('should check if url is relative', function (done) {
+		assert.equal(utils.isRelativeUrl('https://nodebb.org'), false);
+		done();
+	});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.isTouchDevice" id="apidoc.element.nodebb.utils.isTouchDevice">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>isTouchDevice
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isTouchDevice = function () {
+			return 'ontouchstart' in document.documentElement;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			$('#main-nav li').removeClass('active').find('a[href="' + path + '"]').parent
+().addClass('active');
+		}
+	}
+
+	app.createUserTooltips = function (els, placement) {
+		els = els || $('body');
+		els.find('.avatar,img[title].teaser-pic,img[title].user-img,div.user-icon,span.user-icon').each(function () {
+			if (!utils.<span class="apidocCodeKeywordSpan">isTouchDevice</span>()) {
+				$(this).tooltip({
+					placement: placement || $(this).attr('title-placement') || 'top',
+					title: $(this).attr('title')
+				});
+			}
+		});
+	};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.isUserNameValid" id="apidoc.element.nodebb.utils.isUserNameValid">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>isUserNameValid
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isUserNameValid = function (name) {
+			return (name &amp;&amp; name !== '' &amp;&amp; (/^['"\s\-\+.*0-9\u00BF-\u1FFF\u2C00-\uD7FF\w]+$/.test(name)));
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var utils = require('./../public/src/utils.js');
+
+
+describe('Utility Methods', function () {
+	describe('username validation', function () {
+		it('accepts latin-1 characters', function () {
+			var username = "John\"'-. DoeÃ¤Ã¢Ã¨Ã©Ã«1234";
+			assert(utils.<span class="apidocCodeKeywordSpan">isUserNameValid</span>(username), 'invalid username');
+		});
+		it('rejects empty string', function () {
+			var username = '';
+			assert.ifError(utils.isUserNameValid(username), 'accepted as valid username');
+		});
+	});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.makeNumberHumanReadable" id="apidoc.element.nodebb.utils.makeNumberHumanReadable">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>makeNumberHumanReadable
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">makeNumberHumanReadable = function (num) {
+			var n = parseInt(num, 10);
+			if(!n) {
+				return num;
+			}
+			if (n &gt; 999999) {
+				return (n / 1000000).toFixed(1) + 'm';
+			}
+			else if(n &gt; 999) {
+				return (n / 1000).toFixed(1) + 'k';
+			}
+			return n;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	it('should check if url is relative', function (done) {
+		assert.equal(utils.isRelativeUrl('https://nodebb.org'), false);
+		done();
+	});
+
+	it('should make number human readable', function (done) {
+		assert.equal(utils.<span class="apidocCodeKeywordSpan">makeNumberHumanReadable</span>('1000'), '1.0k');
+		done();
+	});
+
+	it('should make number human readable', function (done) {
+		assert.equal(utils.makeNumberHumanReadable('1100000'), '1.1m');
+		done();
+	});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.makeNumbersHumanReadable" id="apidoc.element.nodebb.utils.makeNumbersHumanReadable">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>makeNumbersHumanReadable
+        <span class="apidocSignatureSpan">(elements)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">makeNumbersHumanReadable = function (elements) {
+			elements.each(function () {
+				$(this).html(utils.makeNumberHumanReadable($(this).attr('title')));
+			});
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	};
+
+	app.processPage = function () {
+		highlightNavigationLink();
+
+		$('.timeago').timeago();
+
+		utils.<span class="apidocCodeKeywordSpan">makeNumbersHumanReadable</span>($('.human-readable-number'));
+
+		utils.addCommasToNumbers($('.formatted-number'));
+
+		app.createUserTooltips();
+
+		app.createStatusTooltips();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.merge" id="apidoc.element.nodebb.utils.merge">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>merge
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">merge = function () {
+			var result = {}, obj, keys;
+			for (var i = 0; i &lt; arguments.length; i++) {
+				obj = arguments[i] || {};
+				keys = Object.keys(obj);
+				for (var j = 0; j &lt; keys.length; j++) {
+					result[keys[j]] = obj[keys[j]];
+				}
+			}
+			return result;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			function (eventsData, next) {
+				eventsData.forEach(function (event) {
+					Object.keys(event).forEach(function (key) {
+						if (typeof event[key] === 'string') {
+							event[key] = validator.escape(String(event[key] || ''));
+						}
+					});
+					var e = utils.<span class="apidocCodeKeywordSpan">merge</span>(event);
+					e.eid = e.uid = e.type = e.ip = e.user = undefined;
+					event.jsonString = JSON.stringify(e, null, 4);
+					event.timestampISO = new Date(parseInt(event.timestamp, 10)).toUTCString();
+				});
+				next(null, eventsData);
+			}
+		], callback);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.param" id="apidoc.element.nodebb.utils.param">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>param
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">param = function (key) {
+			return this.params()[key];
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.params" id="apidoc.element.nodebb.utils.params">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>params
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">params = function (options) {
+			var a, hash = {}, params;
+
+			options = options || {};
+			options.skipToType = options.skipToType || {};
+
+			if (options.url) {
+				a = utils.urlToLocation(options.url);
+			}
+			params = (a ? a.search : window.location.search).substring(1).split("&amp;");
+
+			params.forEach(function (param) {
+				var val = param.split('='),
+					key = decodeURI(val[0]),
+					value = options.skipToType[key] ? decodeURI(val[1]) : utils.toType(decodeURI(val[1]));
+
+				if (key) {
+					if (key.substr(-2, 2) === '[]') {
+						key = key.slice(0, -2);
+					}
+					if (!hash[key]) {
+						hash[key] = value;
+					} else {
+						if (!$.isArray(hash[key])) {
+							hash[key] = [hash[key]];
+						}
+						hash[key].push(value);
+					}
+				}
+			});
+			return hash;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.isFocused = true;
+app.currentRoom = null;
+app.widgets = {};
+app.cacheBuster = null;
+
+(function () {
+	var showWelcomeMessage = !!utils.<span class="apidocCodeKeywordSpan">params</span>().loggedin;
+	var showBannedMessage = !!utils.params().banned &amp;&amp; app.user &amp;&amp; app.user.uid === 0;
+
+	templates.setGlobal('config', config);
+
+	app.cacheBuster = config['cache-buster'];
+
+	bootbox.setDefaults({
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.props" id="apidoc.element.nodebb.utils.props">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>props
+        <span class="apidocSignatureSpan">(obj, props, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">props = function (obj, props, value) {
+			if(obj === undefined) {
+				obj = window;
+			}
+			if(props == null) {
+				return undefined;
+			}
+			var i = props.indexOf('.');
+			if( i == -1 ) {
+				if(value !== undefined) {
+					obj[props] = value;
+				}
+				return obj[props];
+			}
+			var prop = props.slice(0, i),
+				newProps = props.slice(i + 1);
+
+			if(props !== undefined &amp;&amp; !(obj[prop] instanceof Object) ) {
+				obj[prop] = {};
+			}
+
+			return utils.props(obj[prop], newProps, value);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				} catch (e) {}
+
+				return str;
+			}
+		},
+
+		// Safely get/set chained properties on an object
+		// set example: utils.<span class="apidocCodeKeywordSpan">props</span>(A, 'a.b.c.d', 10) // sets A to {a: {b: {c: {d
+: 10}}}}, and returns 10
+		// get example: utils.props(A, 'a.b.c') // returns {d: 10}
+		// get example: utils.props(A, 'a.b.c.foo.bar') // returns undefined without throwing a TypeError
+		// credits to github.com/gkindel
+		props: function (obj, props, value) {
+			if(obj === undefined) {
+				obj = window;
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.removePunctuation" id="apidoc.element.nodebb.utils.removePunctuation">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>removePunctuation
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removePunctuation = function (str) {
+			return str.replace(/[\.,-\/#!$%\^&amp;\*;:{}=\-_`&lt;&gt;'"~()?]/g, '');
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			assert.strictEqual(utils.cleanUpTag(1), '');
+			assert.strictEqual(utils.cleanUpTag(0), '');
+			done();
+		});
+	});
+
+	it('should remove punctuation', function (done) {
+		var removed = utils.<span class="apidocCodeKeywordSpan">removePunctuation</span>('some text with , ! punctuation inside &amp;#
+x22;');
+		assert.equal(removed, 'some text with   punctuation inside ');
+		done();
+	});
+
+	it('should return true if string has language key', function (done) {
+		assert.equal(utils.hasLanguageKey('some text [[topic:title]] and [[user:reputaiton]]'), true);
+		done();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.slugify" id="apidoc.element.nodebb.utils.slugify">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>slugify
+        <span class="apidocSignatureSpan">(str, preserveCase)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">slugify = function (str, preserveCase) {
+			if (!str) {
+				return '';
+			}
+			str = str.replace(utils.trimRegex, '');
+			if(utils.isLatin.test(str)) {
+				str = str.replace(utils.invalidLatinChars, '-');
+			} else {
+				str = XRegExp.replace(str, utils.invalidUnicodeChars, '-');
+			}
+			str = !preserveCase ? str.toLocaleLowerCase() : str;
+			str = str.replace(utils.collapseWhitespace, '-');
+			str = str.replace(utils.collapseDash, '-');
+			str = str.replace(utils.trimTrailingDash, '');
+			str = str.replace(utils.trimLeadingDash, '');
+			return str;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+file.saveFileToLocal = function (filename, folder, tempPath, callback) {
+	/*
+	* remarkable doesn't allow spaces in hyperlinks, once that's fixed, remove this.
+	*/
+	filename = filename.split('.');
+	filename.forEach(function (name, idx) {
+		filename[idx] = utils.<span class="apidocCodeKeywordSpan">slugify</span>(name);
+	});
+	filename = filename.join('.');
+
+	var uploadPath = path.join(nconf.get('base_dir'), nconf.get('upload_path'), folder, filename);
+
+	winston.verbose('Saving file ' + filename + ' to : ' + uploadPath);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.toISOString" id="apidoc.element.nodebb.utils.toISOString">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>toISOString
+        <span class="apidocSignatureSpan">(timestamp)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toISOString = function (timestamp) {
+			if (!timestamp || !Date.prototype.toISOString) {
+				return '';
+			}
+
+			return Date.prototype.toISOString ? new Date(parseInt(timestamp, 10)).toISOString() : timestamp;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					return callback(err);
+				}
+
+				Groups.escapeGroupData(results.base);
+
+				results.base.descriptionParsed = descriptionParsed;
+				results.base.userTitleEnabled = results.base.userTitleEnabled ? !!parseInt(results.base.userTitleEnabled, 10) : true;
+				results.base.createtimeISO = utils.<span class="apidocCodeKeywordSpan">toISOString</span>(results.base.createtime);
+				results.base.members = results.members;
+				results.base.membersNextStart = stop + 1;
+				results.base.pending = results.pending.filter(Boolean);
+				results.base.invited = results.invited.filter(Boolean);
+				results.base.deleted = !!parseInt(results.base.deleted, 10);
+				results.base.hidden = !!parseInt(results.base.hidden, 10);
+				results.base.system = !!parseInt(results.base.system, 10);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.toType" id="apidoc.element.nodebb.utils.toType">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>toType
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toType = function (str) {
+			var type = typeof str;
+			if (type !== 'string') {
+				return str;
+			} else {
+				var nb = parseFloat(str);
+				if (!isNaN(nb) &amp;&amp; isFinite(str)) {
+					return nb;
+				}
+				if (str === 'false') {
+					return false;
+				}
+				if (str === 'true') {
+					return true;
+				}
+
+				try {
+					str = JSON.parse(str);
+				} catch (e) {}
+
+				return str;
+			}
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				a = utils.urlToLocation(options.url);
+			}
+			params = (a ? a.search : window.location.search).substring(1).split("&amp;");
+
+			params.forEach(function (param) {
+				var val = param.split('='),
+					key = decodeURI(val[0]),
+					value = options.skipToType[key] ? decodeURI(val[1]) : utils.<span class="apidocCodeKeywordSpan">toType</span>(decodeURI(val
+[1]));
+
+				if (key) {
+					if (key.substr(-2, 2) === '[]') {
+						key = key.slice(0, -2);
+					}
+					if (!hash[key]) {
+						hash[key] = value;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.urlToLocation" id="apidoc.element.nodebb.utils.urlToLocation">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>urlToLocation
+        <span class="apidocSignatureSpan">(url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">urlToLocation = function (url) {
+			var a = document.createElement('a');
+			a.href = url;
+			return a;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		params: function (options) {
+			var a, hash = {}, params;
+
+			options = options || {};
+			options.skipToType = options.skipToType || {};
+
+			if (options.url) {
+				a = utils.<span class="apidocCodeKeywordSpan">urlToLocation</span>(options.url);
+			}
+			params = (a ? a.search : window.location.search).substring(1).split("&amp;");
+
+			params.forEach(function (param) {
+				var val = param.split('='),
+					key = decodeURI(val[0]),
+					value = options.skipToType[key] ? decodeURI(val[1]) : utils.toType(decodeURI(val[1]));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.utils.walk" id="apidoc.element.nodebb.utils.walk">
+        function <span class="apidocSignatureSpan">nodebb.utils.</span>walk
+        <span class="apidocSignatureSpan">(dir, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">walk = function (dir, done) {
+			var results = [];
+
+			fs.readdir(dir, function (err, list) {
+				if (err) {
+					return done(err);
+				}
+				var pending = list.length;
+				if (!pending) {
+					return done(null, results);
+				}
+				list.forEach(function (file) {
+					file = dir + '/' + file;
+					fs.stat(file, function (err, stat) {
+						if (err) {
+							return done(err);
+						}
+
+						if (stat &amp;&amp; stat.isDirectory()) {
+							utils.walk(file, function (err, res) {
+								if (err) {
+									return done(err);
+								}
+
+								results = results.concat(res);
+								if (!--pending) {
+									done(null, results);
+								}
+							});
+						} else {
+							results.push(file);
+							if (!--pending) {
+								done(null, results);
+							}
+						}
+					});
+				});
+			});
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				return callback(err);
+			}
+
+			async.eachSeries(plugins, function (plugin, next) {
+				if (plugin.templates || plugin.id.startsWith('nodebb-theme-')) {
+					winston.verbose('[plugins] Loading templates (' + plugin.id + ')');
+					var templatesPath = path.join(__dirname, '../node_modules', plugin.id, plugin.templates || 'templates');
+					utils.<span class="apidocCodeKeywordSpan">walk</span>(templatesPath, function (err, pluginTemplates) {
+						if (pluginTemplates) {
+							pluginTemplates.forEach(function (pluginTemplate) {
+								if (pluginTemplate.endsWith('.tpl')) {
+									tplName = "/" + pluginTemplate.replace(templatesPath, '').substring(1);
+
+									if (templates.hasOwnProperty(tplName)) {
+										winston.verbose('[plugins] ' + tplName + ' replaced by ' + plugin.id);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.web" id="apidoc.module.nodebb.web">module nodebb.web</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.web.install" id="apidoc.element.nodebb.web.install">
+        function <span class="apidocSignatureSpan">nodebb.web.</span>install
+        <span class="apidocSignatureSpan">(port)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">install = function (port) {
+	port = port || 4567;
+	winston.info('Launching web installer on port', port);
+
+	app.use(express.static('public', {}));
+	app.engine('tpl', require('templates.js').__express);
+	app.set('view engine', 'tpl');
+	app.set('views', path.join(__dirname, '../src/views'));
+	app.use(bodyParser.urlencoded({
+		extended: true
+	}));
+
+	async.parallel([compileLess, compileJS], function () {
+		setupRoutes();
+		launchExpress(port);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	winston.info('');
+}
+
+
+if (nconf.get('setup') || nconf.get('install')) {
+	setup();
+} else if (!configExists) {
+	require('./install/web').<span class="apidocCodeKeywordSpan">install</span>(nconf.get('port'));
+} else if (nconf.get('upgrade')) {
+	upgrade();
+} else if (nconf.get('reset')) {
+	require('./src/reset').reset();
+} else if (nconf.get('activate')) {
+	activate();
+} else if (nconf.get('plugins')) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodebb.widgets" id="apidoc.module.nodebb.widgets">module nodebb.widgets</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodebb.widgets.get" id="apidoc.element.nodebb.widgets.get">
+        function <span class="apidocSignatureSpan">nodebb.widgets.</span>get
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (req, res, next) {
+	require('../../widgets/admin').get(function (err, data) {
+		if (err) {
+			return next(err);
+		}
+
+		res.render('admin/extend/widgets', data);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+global.env = process.env.NODE_ENV || 'production';
+
+winston.remove(winston.transports.Console);
+winston.add(winston.transports.Console, {
+	colorize: true,
+	timestamp: function () {
+		var date = new Date();
+		return (!!nconf.<span class="apidocCodeKeywordSpan">get</span>('json-logging')) ? date.toJSON() :	date.getDate() + &amp;#
+x27;/' + (date.getMonth() + 1) + ' ' + date.toTimeString().substr(0,5) + ' [' + global.process.pid + &amp;#
+x27;]';
+	},
+	level: nconf.get('log-level') || (global.env === 'production' ? 'info' : 'verbose'),
+	json: (!!nconf.get('json-logging')),
+	stringify: (!!nconf.get('json-logging'))
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
